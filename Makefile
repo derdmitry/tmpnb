@@ -34,8 +34,6 @@ tmpnb: minimal-image tmpnb-image
 dev: cleanup proxy tmpnb open
 
 open:
-	docker ps | grep tmpnb
-	docker ps | grep minimal-notebook
 	-open http:`echo $(DOCKER_HOST) | cut -d":" -f2`:8000
 
 cleanup:
